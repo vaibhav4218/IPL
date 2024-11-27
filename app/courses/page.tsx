@@ -12,7 +12,7 @@ const CoursesPage: React.FC = () => {
     {
       title: "HTML for Beginners",
       description: "Learn the basics of HTML, the foundation of web development.",
-      link: "/courses/html",
+      link: "./courses/html",
     },
     {
       title: "CSS Essentials",
