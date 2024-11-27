@@ -1,6 +1,5 @@
 import React from "react";
 import { useRouter } from "next/router";
-import CoursePage from "../components/CoursePage"; // Use relative imports if your setup differs
 
 const courseContent = {
   html: {
@@ -35,23 +34,25 @@ const courseContent = {
   },
 };
 
-const Course = () => {
+const CoursePage: React.FC = () => {
   const router = useRouter();
-  const { course } = router.query; // Access the dynamic route parameter
+  const { id } = router.query; // Get the dynamic route parameter
 
-  const courseDetails = courseContent[course as keyof typeof courseContent];
+  const courseDetails = courseContent[id as keyof typeof courseContent];
 
   if (!courseDetails) {
     return <p className="text-center text-gray-500">Course not found.</p>;
   }
 
   return (
-    <CoursePage
-      title={courseDetails.title}
-      description={courseDetails.description}
-      content={courseDetails.content}
-    />
+    <div className="p-6">
+      <h1 className="text-3xl font-bold mb-4">{courseDetails.title}</h1>
+      <p className="text-gray-600 mb-4">{courseDetails.description}</p>
+      <div className="bg-gray-100 p-4 rounded-md shadow-sm">
+        <p>{courseDetails.content}</p>
+      </div>
+    </div>
   );
 };
 
-export default Course;
+export default CoursePage;
