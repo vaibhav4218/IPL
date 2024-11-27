@@ -1,14 +1,17 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
 
 const Navbar = () => {
   return (
-    <nav className="bg-darkBlue text-offWhite p-4 flex justify-between items-center">
+    <div>
+      <nav className="bg-darkBlue text-offWhite p-4 flex justify-between items-center">
     {/* Logo Section */}
     <div className="flex items-center space-x-3">
-      <img
-        src="C:/Users/vasih/nxtjs/app/images/logo.png" // Path to your logo image
+      <Image
+        src="/logo.png" 
         alt="Logo"
-        className="w-12 h-12 object-contain rounded-full"
+        width={50}
+        height={50}
       />
       <h1 className="text-2xl font-bold">Star Dashboard</h1>
     </div>
@@ -21,6 +24,7 @@ const Navbar = () => {
       <li className="cursor-pointer hover:text-beige">Profile</li>
     </ul>
   </nav>
+    </div>
   )
 }
 
