@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -21,7 +22,8 @@ const Navbar = () => {
       <li className="cursor-pointer hover:text-beige">Home</li>
       <li className="cursor-pointer hover:text-beige">Projects</li>
       <li className="cursor-pointer hover:text-beige">Leaderboard</li>
-      <li className="cursor-pointer hover:text-beige">Profile</li>
+      <Link href={"/CoursesPage"}><li className="cursor-pointer hover:text-beige">Profile</li></Link>
+     
     </ul>
   </nav>
     </div>
