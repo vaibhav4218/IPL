@@ -12,7 +12,7 @@ const CoursesPage: React.FC = () => {
     {
       title: "HTML for Beginners",
       description: "Learn the basics of HTML, the foundation of web development.",
-      link: "/courses/html",
+      link: "/courses/courseContent",
     },
     {
       title: "CSS Essentials",
@@ -52,7 +52,7 @@ const CoursesPage: React.FC = () => {
             <h3 className="text-2xl font-bold mb-2 text-yellow-500">{course.title}</h3>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
               <p className="text-gray-300 mb-4 sm:mb-0 sm:mr-4">{course.description}</p>
-              <Link href={course.link}>
+              <Link href="/courses/content">
                 <span
                   className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 px-4 rounded-lg sm:ml-auto"
                 >
@@ -66,5 +66,3 @@ const CoursesPage: React.FC = () => {
     </div>
   );
 };
-
-export default CoursesPage;

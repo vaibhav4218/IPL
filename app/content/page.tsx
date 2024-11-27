@@ -18,10 +18,41 @@ const courseContent = {
       { id: "layout", name: "CSS Layouts", content: "CSS provides tools like Flexbox and Grid for creating layouts." },
     ],
   },
-  // Add similar structures for other courses...
+  javascript: {
+    title: "JavaScript Basics",
+    topics: [
+      { id: "intro", name: "Introduction to JavaScript", content: "JavaScript is a programming language used to make web pages interactive." },
+      { id: "variables", name: "Variables and Data Types", content: "Variables store data that can be used in your code." },
+      { id: "functions", name: "Functions and Events", content: "Functions are blocks of code that perform specific tasks." },
+    ],
+  },
+  react: {
+    title: "React Fundamentals",
+    topics: [
+      { id: "intro", name: "Introduction to React", content: "React is a JavaScript library for building user interfaces." },
+      { id: "components", name: "Components and Props", content: "Components are the building blocks of React applications." },
+      { id: "state", name: "State and Lifecycle", content: "State allows components to manage and update their data." },
+    ],
+  },
+  "ml-intro": {
+    title: "Machine Learning Introduction",
+    topics: [
+      { id: "intro", name: "What is Machine Learning?", content: "Machine Learning is a subset of AI that enables systems to learn from data." },
+      { id: "types", name: "Types of Machine Learning", content: "Supervised, Unsupervised, and Reinforcement Learning are common types." },
+      { id: "applications", name: "Applications of ML", content: "ML is used in image recognition, natural language processing, and more." },
+    ],
+  },
+  "deep-learning": {
+    title: "Deep Learning with Python",
+    topics: [
+      { id: "intro", name: "Introduction to Deep Learning", content: "Deep Learning is a subset of ML that uses neural networks to model complex patterns." },
+      { id: "neural-nets", name: "Neural Networks", content: "Neural networks are composed of layers of interconnected nodes that process data." },
+      { id: "tensorflow", name: "TensorFlow Basics", content: "TensorFlow is a popular library for building and training neural networks." },
+    ],
+  },
 };
 
-const CoursePage = () => {
+const Page = () => {
   const router = useRouter();
   const { course } = router.query;
 
@@ -65,4 +96,4 @@ const CoursePage = () => {
   );
 };
 
-export default CoursePage;
+export default Page;
